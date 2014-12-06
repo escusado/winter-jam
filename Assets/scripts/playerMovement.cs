@@ -28,18 +28,18 @@ public class playerMovement : MonoBehaviour {
 		var inputDevice = InputManager.ActiveDevice;
 		
 		float moveHorizontal = inputDevice.LeftStickX;
-		float moveVertical   = inputDevice.LeftStickY;
+		float moveVertical   = -inputDevice.LeftStickY;
 
-		Debug.Log(">>>>" + moveVertical + "-" + moveHorizontal);
+//		Debug.Log(">>>>" + moveVertical + "-" + moveHorizontal);
 
-		currentMovement =  new Vector3 (moveHorizontal, 0.0f, moveVertical);
+		currentMovement =  new Vector3 (moveHorizontal, 0, moveVertical);
 
 		rigidbody.velocity = currentMovement * speed;
 		
 		rigidbody.position = new Vector3(
-			Mathf.Clamp (rigidbody.position.x, boundary.xMin, boundary.xMax),
-			0, 
-			Mathf.Clamp (rigidbody.position.z, boundary.zMin, boundary.zMax)
+				Mathf.Clamp (rigidbody.position.x, boundary.xMin, boundary.xMax),
+				8.0f, //Dunno? LOL
+				Mathf.Clamp (rigidbody.position.z, boundary.zMin, boundary.zMax)
 			);
 	}
 }
