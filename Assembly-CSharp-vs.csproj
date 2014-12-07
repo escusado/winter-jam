@@ -46,6 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\BulletBehavior.cs" />
+     <Compile Include="Assets\scripts\Damage.cs" />
+     <Compile Include="Assets\scripts\GameController.cs" />
+     <Compile Include="Assets\scripts\Health.cs" />
+     <Compile Include="Assets\scripts\LookAtTarget.cs" />
+     <Compile Include="Assets\scripts\MoveTowards.cs" />
      <Compile Include="Assets\scripts\destroyByBoundary.cs" />
      <Compile Include="Assets\scripts\directionMover.cs" />
      <Compile Include="Assets\scripts\playerMovement.cs" />
